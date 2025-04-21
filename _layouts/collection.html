@@ -1,0 +1,16 @@
+---
+layout: archive
+---
+{% assign lang = page.lang | default: site.language_default %}
+
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign projects_filtered_by_lang = site.projects | where: "lang", lang %}
+<div class="entries-{{ entries_layout }}">
+    {% include documents-collection.html 
+      entries=projects_filtered_by_lang 
+      sort_by=page.sort_by 
+      sort_order=page.sort_order 
+      type=entries_layout %}
+</div>

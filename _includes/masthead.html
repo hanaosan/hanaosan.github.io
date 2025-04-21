@@ -1,0 +1,87 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+{% assign lang = page.lang | default: site.language_default %}
+{% if lang == site.language_default %}
+  {% if page.path contains 'ja/' or page.url contains '/ja/' %}
+    {% assign lang = 'ja' %}
+  {% endif %}
+{% endif %}
+{% assign current_ref = page.ref %}
+{% if lang == "ja" %}
+  {% assign other_lang = "en" %}
+{% elsif lang == "en" %}
+  {% assign other_lang = "ja" %}
+{% endif %}
+{% assign translated_url = "/" %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        {% unless logo_path == empty %}
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+        {% endunless %}
+          {% if lang == site.language_default %}
+            {% assign home_url = '/' %}
+          {% else %}
+            {% assign home_url = '/' | append: lang | append: '/' %}
+          {% endif %}
+        <a class="site-title" href="{{ home_url | relative_url }}">
+          {{ site.masthead_title | default: site.title }}
+          {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+        </a>
+        <ul class="visible-links">
+          {%- for link in site.data.navigation.main -%}
+            <li class="masthead__menu-item">
+              <a
+                href="{{ link.url[lang] | relative_url }}"
+                {% if link.description %} title="{{ link.description }}"{% endif %}
+                {% if link.target %} target="{{ link.target }}"{% endif %}
+              >{{ link.title[lang] }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        {% if site.search == true %}
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          <i class="fas fa-search"></i>
+        </button>
+        {% endif %}
+        <div class="language-switcher">
+          <ul>
+            {% if current_ref %}
+              {% if page.collection == 'posts' % or (page.url contains '/projects/' and page.url != '/projects/' and page.url != '/ja/projects/') %}
+                {%- assign translations = site.documents | where: "ref", current_ref | where_exp: "item", "item.lang == other_lang" | first -%}
+              {% else %}
+                {%- assign translations = site.pages | where: "ref", current_ref | where_exp: "item", "item.lang == other_lang" | first -%}
+              {% endif %}
+              {% if translations %}
+                {% assign translated_url = translations.url %}
+              {% elsif other_lang == site.language_default %}
+                {% assign translated_url = "/" %}
+              {% else %}
+                {% assign translated_url = "/" | append: other_lang | append: "/" %}
+              {% endif %}
+            {% endif %}
+            <li>
+              <a href="{% if lang == 'en' %}{{ page.url }}{% else %}{{ translated_url }}{% endif %}"
+              class="lang-en{% unless lang == 'en' %} is-inactive{% endunless %}">
+                EN
+              </a>
+            </li>
+            <li>
+              <a href="{% if lang == 'ja' %}{{ page.url }}{% else %}{{ translated_url }}{% endif %}"
+              class="lang-ja{% unless lang == 'ja' %} is-inactive{% endunless %}">
+                JA
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

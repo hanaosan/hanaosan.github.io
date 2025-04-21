@@ -1,0 +1,84 @@
+---
+layout: single
+classes: wide
+lang: ja
+ref: blog
+---
+
+{% assign ja_posts = site.posts | where: "lang", "ja" %}
+{% assign posts_per_page = 5 %}
+{% assign total_pages = ja_posts | size | divided_by: posts_per_page | plus: 1 %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+
+<div class="entries-{{ entries_layout }}">
+  {% for post in ja_posts %}
+    {% assign index = forloop.index0 %}
+    {% assign page_number = index | divided_by: posts_per_page | plus: 1 %}
+    <div class="news-item page-{{ page_number }}"{% if page_number != 1 %} style="display: none;"{% endif %}>
+      {% include archive-single-news.html item=post %}
+    </div>
+  {% endfor %}
+</div>
+
+{% if total_pages > 1 %}
+<nav class="pagination">
+  <ul>
+    <li>
+      <a href="#" class="pagination--pager prev disabled">Previous</a>
+    </li>
+    {% for i in (1..total_pages) %}
+      <li>
+        <a href="#" class="page-link {% if forloop.first %}current{% endif %}" data-page="{{ i }}">{{ i }}</a>
+      </li>
+    {% endfor %}
+    <li>
+      <a href="#" class="pagination--pager next">Next</a>
+    </li>
+  </ul>
+</nav>
+{% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".page-link");
+    const items = document.querySelectorAll(".news-item");
+    const prevBtn = document.querySelector(".pagination--pager.prev");
+    const nextBtn = document.querySelector(".pagination--pager.next");
+    let currentPage = 1;
+    const totalPages = parseInt("{{ total_pages }}", 10) || 1;
+  
+    function updatePagination(page) {
+      currentPage = page;
+  
+      items.forEach(item => item.style.display = "none");
+      document.querySelectorAll(".page-" + page).forEach(item => {
+        item.style.display = "block";
+      });
+  
+      links.forEach(l => l.classList.remove("current"));
+      document.querySelector(`.page-link[data-page='${page}']`)?.classList.add("current");
+  
+      prevBtn?.classList.toggle("disabled", page <= 1);
+      nextBtn?.classList.toggle("disabled", page >= totalPages);
+    }
+  
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const page = parseInt(this.dataset.page);
+        updatePagination(page);
+      });
+    });
+  
+    prevBtn?.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (currentPage > 1) updatePagination(currentPage - 1);
+    });
+  
+    nextBtn?.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (currentPage < totalPages) updatePagination(currentPage + 1);
+    });
+  });
+</script>

@@ -1,9 +1,30 @@
+# main links
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+  - ref: about
+    title:
+      en: "About"
+      ja: "About"
+    url:
+      en: /about/
+      ja: /ja/about/
+  - ref: projects
+    title:
+      en: "Projects"
+      ja: "Projects"
+    url:
+      en: /projects/
+      ja: /ja/projects/
+  # - ref: resume
+  #   title:
+  #     en: "Resume"
+  #     ja: "Resume"
+    # url:
+    #   en: /resume/
+    #   ja: /ja/resume/
+  - ref: blog
+    title:
+      en: "Blog"
+      ja: "Blog"
+    url:
+      en: /blog/
+      ja: /ja/blog/

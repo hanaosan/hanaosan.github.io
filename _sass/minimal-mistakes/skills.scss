@@ -1,0 +1,180 @@
+/*= Skills */
+.skillbar-wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.skillbar {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0;
+}
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+    height: 35px;
+    width: 0%;
+    border-radius: 3px;
+    transition: 300ms linear;
+    transition-property: width, background-color;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.4);
+    transition: color 500ms ease-out;
+}
+
+.complete .skill-bar-percent {
+    color: #333;
+}
+
+.complete.aws .skill-bar-percent {
+    color: #fff;
+}
+
+.html5 .skillbar-title {
+    background: #d35400;
+}
+
+.html5 .skillbar-bar {
+    background: #e67e22;
+}
+
+
+.css .skillbar-title {
+    background: #2980b9;
+}
+
+.css .skillbar-bar {
+    background: #3498db;
+}
+
+.javascript .skillbar-title {
+    background: #fac552;
+}
+
+.javascript .skillbar-bar {
+    background: #f1ac18;
+}
+
+.python .skillbar-title {
+    background: #4672A1;
+}
+
+.python .skillbar-bar {
+    background: #4672A1;
+}
+
+.php .skillbar-title {
+    background: #46465e;
+}
+
+.php .skillbar-bar {
+    background: #5a68a5;
+}
+
+.wordpress .skillbar-title {
+    background: #333333;
+}
+
+.wordpress .skillbar-bar {
+    background: #525252;
+}
+
+.typescript .skillbar-title {
+    background: #3578C6;
+}
+
+.typescript .skillbar-bar {
+    background: #3578C6;
+}
+
+
+.aws .skillbar-title {
+    background: #233042;
+}
+
+.aws .skillbar-bar {
+    background: #233042;
+}
+
+
+.nginx .skillbar-title {
+    background: #42904E;
+}
+
+.nginx .skillbar-bar {
+    background: #42904E;
+}
+
+.mysql .skillbar-title {
+    background: #285F86;
+}
+
+.mysql .skillbar-bar {
+    background: #285F86;
+}
+
+.agile .skillbar-title {
+    background: #E55558;
+}
+
+.agile .skillbar-bar {
+    background: #E55558;
+}
+
+.linux .skillbar-title {
+    background: #F4B43F;
+}
+
+.linux .skillbar-bar {
+    background: #F4B43F;
+}
+
+.nosql .skillbar-title {
+    background: #5DCBFA;
+}
+
+.nosql .skillbar-bar {
+    background: #5DCBFA;
+}
+
+@media (max-width: 768px) {
+    .skillbar-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

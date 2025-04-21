@@ -1,0 +1,11 @@
+{% assign lang = page.lang | default: site.language_default %}
+{% assign home = site.data.home-text.home[lang] %}
+
+<nav class="pagination">
+  <div class="back_to_news">
+    <span class="back_to_news__content">
+      <a class="back_to_news-title" href="{{ home.news.href }}">{{ home.news.back_to_news }}</a>
+      <i class="fa-solid fa-angles-right"></i>
+    </span>
+  </div>
+</nav>

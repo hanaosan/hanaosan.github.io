@@ -1,0 +1,63 @@
+---
+layout: archive
+---
+
+{% assign lang = page.lang | default: site.language_default %}
+{% assign home = site.data.home-text.home[lang] %}
+
+<section id="landing">
+  {% include cube-background.html %}
+  <div class="headline">
+    <h2>{{ home.landing.title }}</h2>
+    <h1>{{ home.landing.name }}</h1>
+    <p>{{ home.landing.sub_title }}</p>  
+  </div>
+</section>
+<section id="overview">
+  <div class="overview__content">
+    <div class="overview__left">
+      <h2 class="section_title">{{ home.research.title }}</h2>
+      <p>{{ home.research.text }}</p>
+    </div>
+    <div class="overview__right">
+      <img src="../assets/img/research-image.png" alt="研究に関連する画像" style="max-width: 100%; border-radius: 15px;">
+    </div>
+  </div>
+  <div class="overview__more-wrapper">
+    <div class="overview__more-profile">
+      <a href="{{ home.research.profile_href }}" class="overview__more-title">{{ home.research.view_profile }}</a>
+      <i class="fa-solid fa-angles-right"></i>
+    </div>
+    <div class="overview__more-projects">
+      <a href="{{ home.research.projects_href }}" class="overview__more-title">{{ home.research.view_all }}</a>
+      <i class="fa-solid fa-angles-right"></i>
+    </div>
+  </div>
+</section>
+<section id="news">
+  <div class="news__content">
+    <div class="news__left">
+      <h2 class="section_title"> {{ home.news.title }}</h2>
+      <div class="news__more">
+        <a href="{{ home.news.href }}" class="news__more-title">{{ home.news.view_all }}</a>
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+    </div>
+    <div class="news__right">
+      {% assign localized_posts = site.posts | where: "lang", lang %}
+      {% for post in localized_posts limit:3 %}
+        <a href="{{ post.url }}" class="news-card">
+          <p class="news-card__date">{{ post.date | date: "%Y-%m-%d" }}</p>
+          <p class="news-card__title">{{ post.excerpt }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contact__content">
+    <h2 class="section_title"> {{ home.contact.title }}</h2>
+    <p>{{ home.contact.name }}</p>
+    <p>Email: nao.teranishi.sofue@gmail.com</p>
+  </div>
+</section>

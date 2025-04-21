@@ -1,0 +1,44 @@
+# home page text
+home:
+  en:
+    landing:
+      title: "Software Engineer Based in Indiana, US."
+      name: "Nao Teranishi"
+      sub_title: "Welcome to Nao's DevHub! This is the portfolio site of Nao Teranishi, a software engineer, where I showcase my projects and share technical blogs.<br>I created this site to give you a better understanding of who I am and what I do.<br>I hope you enjoy exploring the site!"
+    research:
+      title: "Who I Am as a Software Engineer"
+      text: "I specialize in backend development, cloud infrastructure management, and DevOps.<br>I'm involved throughout the entire development lifecycle—from development and testing to release. <br>My strength lies in my curiosity and passion for technology, as well as my flexibility to work across a wide range of technical areas."
+      view_all: "View All Projects"
+      projects_href: "/projects/"
+      view_profile: "View Profile"
+      profile_href: "/about/"
+    news:
+      title: "Blog"
+      view_all: "View All Blog"
+      back_to_news: "Back to Blog"
+      href: "/blog/"
+    contact:
+      title: "Contact"
+      name: "Nao Teranishi"
+  ja:
+    landing:
+      title: "Software Engineer Based in Indiana, US."
+      name: "寺西 菜緒"
+      sub_title: "ポートフォリオサイトをみていただきありがとうございます。このサイトでは、過去に参加したプロジェクトや技術ブログを紹介しています。私がどんな人間で、何をしているのかを知ってもらうために作成しました。ぜひ楽しんでいってください！"
+    research:
+      title: "Who I Am as a Software Engineer"
+      text: "バックエンド開発、クラウドインフラストラクチャ管理、およびDevOpsを得意とするエンジニアです！<br>
+            設計、開発からテスト、リリースまでライフサイクル全体を経験しています。<br>
+            技術に対する好奇心や経験のない領域へ挑戦することを大事にしています。"
+      view_all: "過去のプロジェクト"
+      projects_href: "/ja/projects/"
+      view_profile: "経歴を見る"
+      profile_href: "/ja/about/"
+    news:
+      title: "Blog"
+      view_all: "すべて見る"
+      back_to_news: "一覧へ戻る"
+      href: "/ja/blog/"
+    contact:
+      title: "Contact"
+      name: "寺西 菜緒"
