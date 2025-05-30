@@ -7,7 +7,7 @@ order: 5
 ref: portfolio02
 lang: en
 ---
-![teaser](/assets/img/portfolio01.png){:width="450px"}
+![teaser](/assets/img/portfolio02.png){:width="450px"}
 
 ## About
 I built a website using Jekyll with the Minimal Mistakes theme and hosted it on GitHub Pages.

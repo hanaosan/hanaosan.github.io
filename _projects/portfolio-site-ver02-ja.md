@@ -9,7 +9,7 @@ category: projects
 lang: ja
 permalink: /ja/projects/portfolio02
 ---
-![teaser](/assets/img/portfolio01.png){:width="450px"}
+![teaser](/assets/img/portfolio02.png){:width="450px"}
 
 ## 概要
 
