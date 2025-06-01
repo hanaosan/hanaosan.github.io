@@ -34,7 +34,7 @@ Additionally, I collaborated in Scrum teams of various sizes, gaining experience
 ## Skills
 
 
-100%: Over 2 years of professional experience, 75%: Over 1 year of professional experience, 50%: Less than 1 year of experience.
+100%: 3 years of professional experience, 75%: 2 year of professional experience, 50%: 1 year of experience, 25%: Less than 1 year of experience.
 
 <div class="skillbar-wrapper">
     <div class="skillbar clearfix php" data-percent="100%">
@@ -70,7 +70,7 @@ Additionally, I collaborated in Scrum teams of various sizes, gaining experience
     <div class="skillbar clearfix wordpress" data-percent="50%">
         <h4 class="skillbar-title"><span>WordPress</span></h4>
         <div class="skillbar-bar"></div>
-        <div class="skill-bar-percent">50%</div>
+        <div class="skill-bar-percent">25%</div>
     </div>
 
     <div class="skillbar clearfix aws" data-percent="100%">
@@ -106,11 +106,7 @@ Additionally, I collaborated in Scrum teams of various sizes, gaining experience
     <div class="skillbar clearfix nosql" data-percent="75%">
         <h4 class="skillbar-title"><span>NoSQL</span></h4>
         <div class="skillbar-bar"></div>
-        <div class="skill-bar-percent">75%</div>
+        <div class="skill-bar-percent">50%</div>
     </div>
 </div>
 <script src="{{ '/assets/js/skills.js' | relative_url }}"></script>
-
-
-
-[See More on My Resume](/resume.md)

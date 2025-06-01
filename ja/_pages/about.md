@@ -33,9 +33,10 @@ CakePHPを用いたREST APIの開発・改善では、50以上の機能を実装
 
 ## Skills
 
-・100%: 2年以上の職務経験
-・75%: 1年以上の職務経験
-・50%: 1年以内の経験。
+・100%: 3年以上の職務経験
+・75%: 2年以上の職務経験
+・50%: 1年以上の経験。
+・25%: 1年以内の経験。
 <div class="skillbar-wrapper">
     <div class="skillbar clearfix php" data-percent="100%">
         <h4 class="skillbar-title"><span>PHP</span></h4>
@@ -70,7 +71,7 @@ CakePHPを用いたREST APIの開発・改善では、50以上の機能を実装
     <div class="skillbar clearfix wordpress" data-percent="50%">
         <h4 class="skillbar-title"><span>WordPress</span></h4>
         <div class="skillbar-bar"></div>
-        <div class="skill-bar-percent">50%</div>
+        <div class="skill-bar-percent">25%</div>
     </div>
 
     <div class="skillbar clearfix aws" data-percent="100%">
@@ -106,9 +107,7 @@ CakePHPを用いたREST APIの開発・改善では、50以上の機能を実装
     <div class="skillbar clearfix nosql" data-percent="75%">
         <h4 class="skillbar-title"><span>NoSQL</span></h4>
         <div class="skillbar-bar"></div>
-        <div class="skill-bar-percent">75%</div>
+        <div class="skill-bar-percent">50%</div>
     </div>
 </div>
 <script src="{{ '/assets/js/skills.js' | relative_url }}"></script>
-
-[See More on My Resume](/ja/resume/)
