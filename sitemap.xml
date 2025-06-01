@@ -1,22 +1,71 @@
----
-layout: none
-permalink: /sitemap.xml
----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in site.pages %}
-        {% unless page.sitemap == false or page.url contains '404.html' %}
-        <url>
-            <loc>{{ site.url }}{{ page.url | replace:'index.html','' }}</loc>
-        </url>
-        {% endunless %}
-    {% endfor %}
 
-    {% for post in site.posts %}
-        <url>
-            <loc>{{ site.url }}{{ post.url }}</loc>
-            <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        </url>
-    {% endfor %}
+    <url>
+        <loc>https://naoteranishi.com/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/about/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/about/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/blog/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/blog/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/projects/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/projects/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/resume/</loc>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/resume/</loc>
+    </url>
+
+    <!-- Blog posts -->
+    <url>
+        <loc>https://naoteranishi.com/blog/2024/07/04/</loc>
+        <lastmod>2024-07-04</lastmod>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/blog/2024/07/04/</loc>
+        <lastmod>2024-07-04</lastmod>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/blog/2024/08/09/</loc>
+        <lastmod>2024-08-09</lastmod>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/blog/2024/08/09/</loc>
+        <lastmod>2024-08-09</lastmod>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/blog/2024/10/09/</loc>
+        <lastmod>2024-10-09</lastmod>
+    </url>
+
+    <url>
+        <loc>https://naoteranishi.com/ja/blog/2024/10/09/</loc>
+        <lastmod>2024-10-09</lastmod>
+    </url>
+
 </urlset>
