@@ -15,6 +15,8 @@ remote_theme             : "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin    : "eva" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
+url: "https://naoteranishi.com"
+baseurl: ""
 locale                   : "en-US"
 language_default: en
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
@@ -255,19 +257,9 @@ pagination:
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-
 
 # Archives
 #  Type
